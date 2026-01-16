@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мой Блог</title>
+    <style>
+        :root {
+            --bg: #fafafa;
+            --text: #222;
+            --accent: #2563eb;
+            --card-bg: #ffffff;
+            --border: #e5e7eb;
+            --shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+        }
+
+        body {
+            margin: 0;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+        }
+
+        header {
+            background: var(--card-bg);
+            border-bottom: 1px solid var(--border);
+            padding: 3rem 1rem 2rem;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.8rem;
+            font-weight: 700;
+            color: var(--accent);
+        }
+
+        header p {
+            margin: 0.8rem 0 0;
+            color: #666;
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        main {
+            max-width: 1200px;
+            margin: 4rem auto;
+            padding: 0 1.5rem;
+        }
+
+        .posts {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2.5rem;
+        }
+
+        .post-card {
+            background: var(--card-bg);
+            border-radius: 16px;
+            padding: 2rem;
+            box-shadow: var(--shadow);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 1px solid var(--border);
+        }
+
+        .post-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 12px 28px rgba(0, 0, 0, 0.1);
+        }
+
+        .post-date {
+            color: #666;
+            font-size: 0.95rem;
+            margin-bottom: 0.8rem;
+            font-weight: 500;
+        }
+
+        .post-title {
+            margin: 0 0 1rem;
+            font-size: 1.7rem;
+            font-weight: 600;
+            line-height: 1.3;
+        }
+
+        .post-title a {
+            color: var(--text);
+            text-decoration: none;
+        }
+
+        .post-title a:hover {
+            color: var(--accent);
+        }
+
+        .post-excerpt {
+            margin: 0 0 1.5rem;
+            color: #444;
+            font-size: 1.05rem;
+        }
+
+        .read-more {
+            display: inline-block;
+            color: var(--accent);
+            font-weight: 600;
+            text-decoration: none;
+            font-size: 1rem;
+        }
+
+        .read-more:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            text-align: center;
+            padding: 3rem 1rem 2rem;
+            color: #666;
+            font-size: 0.95rem;
+            border-top: 1px solid var(--border);
+            margin-top: 5rem;
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2.3rem;
+            }
+            
+            header p {
+                font-size: 1.1rem;
+            }
+            
+            main {
+                margin: 3rem auto;
+                padding: 0 1rem;
+            }
+            
+            .posts {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            
+            .post-card {
+                padding: 1.8rem;
+            }
+            
+            .post-title {
+                font-size: 1.6rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Мой Блог</h1>
+        <p>Простые мысли о жизни, технологиях, книгах и всём, что вдохновляет</p>
+    </header>
+
+    <main>
+        <section class="posts">
+            <!-- Пост 1 -->
+            <article class="post-card">
+                <div class="post-date">15 января 2026</div>
+                <h2 class="post-title"><a href="#">Минимализм в цифровой жизни</a></h2>
+                <p class="post-excerpt">Как избавиться от цифрового мусора, упростить интерфейсы и сосредоточиться на главном. Несколько практических советов, которые изменили мою повседневность.</p>
+                <a href="#" class="read-more">Читать дальше →</a>
+            </article>
+
+            <!-- Пост 2 -->
+            <article class="post-card">
+                <div class="post-date">10 января 2026</div>
+                <h2 class="post-title"><a href="#">Утро в горах</a></h2>
+                <p class="post-excerpt">Рассказ о коротком походе, тишине природы и том, как такие моменты помогают перезагрузиться и взглянуть на жизнь по-новому.</p>
+                <a href="#" class="read-more">Читать дальше →</a>
+            </article>
+
+            <!-- Пост 3 -->
+            <article class="post-card">
+                <div class="post-date">5 января 2026</div>
+                <h2 class="post-title"><a href="#">Почему я люблю чистый код</a></h2>
+                <p class="post-excerpt">Несколько простых правил, которые делают код читаемым, поддерживаемым и приятным для работы — даже спустя годы.</p>
+                <a href="#" class="read-more">Читать дальше →</a>
+            </article>
+
+            <!-- Добавляйте новые посты здесь, копируя блок выше -->
+        </section>
+    </main>
+
+    <footer>
+        © 2026 Мой Блог. Все права защищены.
+    </footer>
+</body>
+</html>
